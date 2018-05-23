@@ -7,9 +7,9 @@ class Features extends Component {
 
     displayFeatures() {
         // create array of react elements
-        return this.props.cities.map(feature => {
+        return this.props.cities.map((feature, index) => {
           return (
-            <Feature key={feature} city={feature} lorem={this.state.lorem} />
+            <Feature key={feature} city={feature} lorem={this.state.lorem} click={() => this.props.click(index)}/>
           ) 
         });
       }
